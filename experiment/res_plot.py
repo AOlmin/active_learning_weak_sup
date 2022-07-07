@@ -13,7 +13,7 @@ def vis_res_main(args, suff="", metric_name="MSE", interpolate_results=False, in
 
     nb_experiments = args.nb_experiments
 
-    cost_general = np.cumsum(np.load(dir + "Bald" + suff + "_costs_expeiment_" + str(0) + ".npy"))
+    cost_general = np.cumsum(np.load(dir + "Bald" + suff + "_costs_experiment_" + str(0) + ".npy"))
     costs_bald_ws = []
 
     Bald_mean, eval_Bald_mean, Bald_WS_mean, eval_Bald_WS_mean, Random_mean = [], [], [], [], []
@@ -28,7 +28,7 @@ def vis_res_main(args, suff="", metric_name="MSE", interpolate_results=False, in
     for i in np.arange(0, nb_experiments):
         Bald = np.load(dir + "Bald" + suff + "_" + metric_name + "_results_experiment_" + str(i) + ".npy")
         Bald_WS = np.load(dir + "Bald_WS" + suff + "_" + metric_name + "_results_experiment_" + str(i) + ".npy")
-        costs_bald_ws = np.cumsum(np.load(dir + "Bald_WS" + suff + "_costs_expeiment_" + str(i) + ".npy"))
+        costs_bald_ws = np.cumsum(np.load(dir + "Bald_WS" + suff + "_costs_experiment_" + str(i) + ".npy"))
         Bald_WS_precision = np.load(dir + "Bald_WS" + suff + "_precision_experiment_" + str(i) + ".npy")
         Random = np.load(dir + "Random" + suff + "_" + metric_name + "_results_experiment_" + str(i) + ".npy")
 
@@ -43,7 +43,7 @@ def vis_res_main(args, suff="", metric_name="MSE", interpolate_results=False, in
         if include_mi:
             MI_WS = np.load(dir + "MI_WS" + suff + "_" + metric_name + "_results_experiment_" + str(i) + ".npy")
             MI_WS_precision = np.load(dir + "MI_WS" + suff + "_precision_experiment_" + str(i) + ".npy")
-            costs_mi_ws = np.cumsum(np.load(dir + "MI_WS" + suff + "_costs_expeiment_" + str(i) + ".npy"))
+            costs_mi_ws = np.cumsum(np.load(dir + "MI_WS" + suff + "_costs_experiment_" + str(i) + ".npy"))
 
             print("Min precision parameter MI with Y {}".format(MI_WS_precision.min()))
             print("Max precision parameter MI with Y {}".format(MI_WS_precision.max()))
@@ -90,7 +90,7 @@ def vis_res_main(args, suff="", metric_name="MSE", interpolate_results=False, in
             plt.close()
 
 
-        start_pool = cost_general[0]
+        start_pool = int(cost_general[0])
         plt.scatter(np.linspace(1, Bald_WS_precision.shape[0] - start_pool, Bald_WS_precision.shape[0] - start_pool),
                     Bald_WS_precision[start_pool:], color="orange", linewidth=3.0, marker="x", label=r"MI($\tilde{Y};f$)")
 
