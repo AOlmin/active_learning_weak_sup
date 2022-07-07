@@ -10,9 +10,9 @@ UCI data sets, concrete compressive strength (data needs to be downloaded): pyth
 
 UCI data sets experiment, superconductivity (data needs to be downloaded): python -m experiment.uci.superconductivity_experiment --nb_experiments 15 --nb_acquisitions 80 --nb_queries 1 --save_dir "experiment/uci/res/" --data_dir "experiment/uci/data/" --fit --fit_hyp
 
-Toy class experiments, version 1: python -m experiment.toy_class.toy_class_experiment --nb_experiments 15 --nb_queries 1 --nb_acquisitions 25 --save_dir "experiment/toy_class/res/" --version v1 --fit
+Toy class experiments, version 1: python -m experiment.toy_class.toy_class_experiment --nb_experiments 15 --nb_acquisitions 25 --nb_queries 1 --save_dir "experiment/toy_class/res/" --version v1 --fit
 
-Toy class experiments, version 2: python -m experiment.toy_class.toy_class_experiment --nb_experiments 15 --nb_queries 1 --nb_acquisitions 25 --save_dir "experiment/toy_class/res/" --version v2 --fit
+Toy class experiments, version 2: python -m experiment.toy_class.toy_class_experiment --nb_experiments 15 --nb_acquisitions 25 --nb_queries 1 --save_dir "experiment/toy_class/res/" --version v2 --fit
 
 Toy class experiments, version 3: python -m experiment.toy_class.toy_class_experiment --nb_experiments 15 --nb_queries 1 --nb_acquisitions 25 --save_dir "experiment/toy_class/res/" --version v3 --fit
 
