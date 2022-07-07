@@ -37,7 +37,7 @@ def toy_class_exp_main(args, suff, cost_fun, precision_fun, prior_var=0.8, var_f
 
     if fit:
         for e in range(args.nb_experiments):
-            store_file = "data/toy_class_data_" + version + "_exp_" + str(e) + suff
+            store_file = "toy_class_data_" + version + "_exp_" + str(e) + suff
 
             data = get_toy_class_data(store_file=store_file, prior_var=prior_var, var_factor=var_factor,
                                       reuse_data=True, num_samples=10000, version=version)
