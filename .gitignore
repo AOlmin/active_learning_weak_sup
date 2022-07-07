@@ -6,7 +6,7 @@ __pycache__/
 .cache
 .coverage
 logs
-data/
+
 experiment/sine_regression/data
 experiment/sine_regression/res
 experiment/sine_regression/res_test
