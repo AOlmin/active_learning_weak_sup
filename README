@@ -1,7 +1,7 @@
 Code for the paper "Active Learning with Weak Annotations for Gaussian Processes". Part of the code was inspired by the github repository of the paper "Yarin Gal, Riashat Islam, Zoubin Ghahramani. "Deep Bayesian Active Learning". ICML 2017. https://arxiv.org/pdf/1703.02910.pdf".
 
 
-### To reproduce the experiments in the paper:
+###To reproduce the experiments in the paper:
 
 #### Sine curve experiments, q=0.2: python -m experiment.sine_regression.sine_regression_experiment_fs_3_cost_function --nb_experiments 15 --nb_acquisitions 40 --nb_queries 1 --q 0.2 --fs 3.0  --save_dir "experiment/sine_regression/res/" --fit --interpolate
 
